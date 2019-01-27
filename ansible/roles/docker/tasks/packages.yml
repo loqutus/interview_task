@@ -1,0 +1,6 @@
+---
+- name: install docker package
+  apt:
+    name: "{{ item }}"
+    state: installed
+  loop: "{{ docker_packages }}"
